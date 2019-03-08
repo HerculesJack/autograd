@@ -5,9 +5,11 @@ from . import gamma
 from . import norm
 from . import poisson
 from . import t
+from . import kde
 
-# Try block needed in case the user has an
-# old version of scipy without multivariate normal.
+# Try block needed in case the user has an old version
+# of scipy without multivariate_normal or dirichlet.
+
 try:
     from . import multivariate_normal
 except AttributeError:
